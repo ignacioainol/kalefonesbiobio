@@ -125,14 +125,24 @@ a.btn-wsp > i{
   .site-section.site-section-sm {
     padding: 4em 0; }
 
-  #bgVideoStart{
-    width: 100%;
-    position: absolute;
-  }
-
   .overVideo{
     z-index: 9999;
   }
+
+.sectionOne{
+  overflow: hidden;
+}
+
+.video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.video-container video{
+  width: 100%;
+}
 
 .bg-text-line {
   display: inline;
@@ -676,6 +686,10 @@ p.dropcap:first-child:first-letter {
       padding: 70px 50px;
       position: relative; }
       @media (max-width: 991.98px) {
+        .video-container video{
+            height: 100vh !important;
+            width: auto !important;
+          }
         .section-2 .service-1 .service-1-contents {
           padding: 30px; } }
       .section-2 .service-1 .service-1-contents p, .section-2 .service-1 .service-1-contents h2 {
