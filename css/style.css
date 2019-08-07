@@ -147,6 +147,7 @@ a.btn-wsp > i{
   overflow: hidden;
 }
 
+
 .video-container{
   position: absolute;
   top: 0;
@@ -200,17 +201,31 @@ a.btn-wsp > i{
     border-color: #1976d2; 
   }
 
+  .btnGasfiter:hover{
+    background: #1976d2;
+    border-color: #1976d2; 
+  }
+
+@media screen and (max-width: 700px) {
+  .contactoDiv > h2:first-child{
+    padding-top: 2em;
+  }
+}
+
 @media (max-width: 767.98px) {
   .display-3, .display-2, .display-4 {
-    font-size: 2rem !important; } }
+    font-size: 2rem !important; } 
+  }
 
 @media (max-width: 991.98px) {
   .bg-md-height {
     height: 300px; } }
 
 @media (max-width: 767.98px) {
+
   .bg-sm-height {
-    height: 300px; } }
+    height: 300px; } 
+  }
 
 .text-gray-100 {
   color: #f8f9fa !important; }
@@ -858,7 +873,7 @@ p.dropcap:first-child:first-letter {
   background: #fff; }
   .form-request h2 {
     font-size: 30px;
-    color: #cea15a;
+    color: #1976d2;
     margin-bottom: 30px; }
   .form-request .form-control {
     border: 1px solid #efefef; }
@@ -934,3 +949,10 @@ p.dropcap:first-child:first-letter {
       border: 1px solid white; }
       .block-16 .play-button:hover > span {
         color: #fff; }
+
+
+/*Main class cyrax Ignacio*/
+.site-navbar{
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+}
