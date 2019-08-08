@@ -1,1 +1,1 @@
-sendmail.php
+<?php
