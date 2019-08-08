@@ -71,8 +71,9 @@
     <div class="site-blocks-cover overlay sectionOne" data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
 
       <div class="video-container">
-          <video autoplay loop>
-            <source src="video/gasfiteriaFinish1.mp4">
+          <video autoplay="true" loop="true" id="videoBackground">
+            <source src="video/gasfiteriaFinish1.mp4" type="video/mp4">
+            <source src="video/gasfiteriaFinish1.webm" type="video/webm">
           </video>
       </div>
 
@@ -163,21 +164,24 @@
           <div class="col-lg-6">
             <div class="form-request">
               <h2>Contáctanos</h2>
-              <form action="#">
+              <form id="formContact" action="php/sendmail.php" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="nombre" required placeholder="Nombre">
+                  <input type="text" class="form-control" name="nombreForm" id="nombreForm" placeholder="Nombre">
                 </div>
                 <div class="form-group">
                   <input type="email" class="form-control" name="email" placeholder="Tu email">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="telefono" placeholder="Número Telefónico">
+                  <input type="text" class="form-control" name="telefonoForm" id="telefonoForm" placeholder="Número Telefónico">
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" placeholder="Mensaje" required name="mensaje" id="" cols="30" rows="2"></textarea>
+                  <textarea class="form-control" placeholder="Mensaje" name="mensajeForm" id="mensajeForm" cols="30" rows="2"></textarea>
                 </div>
                 <div class="form-group">
-                  <input type="submit" class="btn btn-primary btnGasfiter" value="Enviar Mensaje">
+                  <input type="submit" class="btn btn-primary btnGasfiter" id="btnEnviarForm" value="Enviar Mensaje">
+                  <div id="logoLoading" style="text-align: center;">
+                      <img src="images/loading.svg" id="logoajax" style="display: none" alt="Gasfiteria Ainol">
+                  </div>
                 </div>
               </form>
             </div>
@@ -210,6 +214,29 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
+  <script>
+    $('document').ready(function(){
+
+      $('#formContact').unbind('submit').bind('submit',function(){
+        var form = $(this);
+        $.ajax({
+          url: form.attr('action'),
+          type: form.attr('method'),
+          data: form.serialize(),
+          dataType: 'json',
+          beforeSend: function(){
+            document.getElementById('btnEnviarForm').style.display = "none";
+            document.getElementById('logoajax').style.display = "inline";
+          },
+          success: function(response){
+            alert("holamundo");
+          }
+        })
+
+        return false;
+      })
+    });
+  </script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
@@ -221,7 +248,6 @@
   <script src="https://kit.fontawesome.com/23a65f9a88.js"></script>
   <script src="js/aos.js"></script>
   <!-- <script src="js/circleaudioplayer.js"></script> -->
-
   <script src="js/main.js"></script>
     
   </body>
