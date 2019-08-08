@@ -71,9 +71,9 @@
     <div class="site-blocks-cover overlay sectionOne" data-aos="fade" data-stellar-background-ratio="0.5" data-aos="fade">
 
       <div class="video-container">
-          <video autoplay="true" loop="true" id="videoBackground">
-            <source src="video/gasfiteriaFinish1.mp4" type="video/mp4">
-            <source src="video/gasfiteriaFinish1.webm" type="video/webm">
+          <video autoplay="true" muted="true" loop="true" id="videoBackground" controls="false">
+            <source src="./video/gasfiteriaFinish1.mp4" type="video/mp4">
+            <source src="./video/gasfiteriaFinish1.webm" type="video/webm">
           </video>
       </div>
 
@@ -223,13 +223,14 @@
           url: form.attr('action'),
           type: form.attr('method'),
           data: form.serialize(),
-          dataType: 'json',
           beforeSend: function(){
             document.getElementById('btnEnviarForm').style.display = "none";
             document.getElementById('logoajax').style.display = "inline";
           },
           success: function(response){
-            alert("holamundo");
+            document.getElementById('logoajax').style.display = "none";
+            document.getElementById('btnEnviarForm').style.display = "inline";
+            alert(response);
           }
         })
 
