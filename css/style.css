@@ -66,7 +66,8 @@ a.btn-wsp > i{
 
 .parallax { 
   /* The image used */
-  background-image: url("https://www.grahamsandersoninteriors.com/ce-s3/c87e1996a3eddefec4209edfd8e3f8048ca5eae3.jpg");
+  /*background-image: url("https://www.grahamsandersoninteriors.com/ce-s3/c87e1996a3eddefec4209edfd8e3f8048ca5eae3.jpg");*/
+  background-image: url('../images/llaves.jpg');  
 
   /* Set a specific height */
   height: 300px; 
@@ -276,7 +277,7 @@ a.btn-wsp > i{
   padding: 4em 0; }
   @media (min-width: 768px) {
     .site-footer {
-      padding: 7em 0; } }
+      padding: 4em 0; } }
   .site-footer p {
     color: #737373; }
   .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5 {
@@ -301,6 +302,10 @@ a.btn-wsp > i{
       height: 2px;
       position: absolute;
       bottom: 0; }
+
+  .site-footer h1 > a{
+    color:#212121;
+  }
 
 /* Navbar */
 .site-navbar-top .site-logo {
