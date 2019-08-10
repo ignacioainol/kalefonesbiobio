@@ -145,6 +145,7 @@ a.btn-wsp > i{
   }
 
 .sectionOne{
+  background: url('../images/bgTest.jpg');
   overflow: hidden;
 }
 
@@ -274,6 +275,7 @@ a.btn-wsp > i{
     margin-bottom: 15px; } }
 
 .site-footer {
+  background: #f5f5f5;
   padding: 4em 0; }
   @media (min-width: 768px) {
     .site-footer {
@@ -605,7 +607,8 @@ a.btn-wsp > i{
     font-size: 4rem;
     font-weight: normal;
     letter-spacing: .1em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-top: 2em; }
   .site-blocks-cover p {
     color: #fff;
     font-size: 1.5rem;
@@ -622,6 +625,19 @@ a.btn-wsp > i{
   .site-blocks-cover.subscribe p {
     font-size: 1rem !important;
     font-weight: 100; }
+
+.serviceOne{
+  padding: 10em 1em 7em 1em;
+}
+
+.serviceOne h1{
+    font-weight: 900;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
 
 /* Judicial */
 .btn-primary {
